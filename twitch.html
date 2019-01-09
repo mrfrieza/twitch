@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background: Grey;
+}
+.onoffswitch {
+    position: relative; width: 101px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-radio {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 50px;
+}
+.A {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.A:before, .A:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.A:before {
+    content: "ACTUG";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.A:after {
+    content: "ACTUG";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.B {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.B:before, .B:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.B:before {
+    content: "ELFHORYS";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.B:after { 
+    content: "ELFHORYS";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.C {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.C:before, .C:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.C:before {
+    content: "KENDRIS";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.C:after {
+    content: "KENDRIS";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.D {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.D:before, .D:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.D:before {
+    content: "JUSTYNE";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.D:after {
+    content: "JUSTYNE";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.E {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.E:before, .E:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.E:before {
+    content: "FERLINNA";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.E:after {
+    content: "FERLINNA";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.F {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.F:before, .F:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.F:before {
+    content: "RORQUAL";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.F:after {
+    content: "RORQUAL";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.G {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.G:before, .G:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.G:before {
+    content: "QWEECHYES";
+    padding-left: 7px;
+    background-color: #33AD2F; color: #FFFFFF;
+}
+.G:after {
+    content: "QWEECHYES";
+    padding-right: 7px;
+    background-color: #FF5454; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 1px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 77px;
+    border: 2px solid #999999; border-radius: 50px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-radio:checked + .onoffswitch-label .A {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .B {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .C {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .D {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .E {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .F {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .G {
+    margin-left: 0;
+}
+.onoffswitch-radio:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+#here { 
+	position: relative;
+	float: left;
+	margin-top: -265px;
+	margin-left: 120px;
+    width: 67%;
+    height: 82vh;
+	}
+#ici { 
+	position: relative;
+	float: right;
+	margin-top: -265px;
+    width: 23%;
+    height: 82vh;
+	}
+</style>
+<script src="./jquery.js"></script>
+</head>
+
+<body>
+
+<script>
+function load(page) {
+document.getElementById("here").src = page;
+}
+</script>
+
+<script>
+function chat(page) {
+document.getElementById("ici").src = page;
+}
+</script>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="un" onclick="load('https://player.twitch.tv/?volume=1&channel=actugofficiel');chat('https://www.twitch.tv/embed/actugofficiel/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="un">
+        <span class="A"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="deux" onclick="load('https://player.twitch.tv/?volume=1&channel=Elfhorys');chat('https://www.twitch.tv/embed/Elfhorys/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="deux">
+        <span class="B"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="cinq" onclick="load('https://player.twitch.tv/?volume=1&channel=ferlinna');chat('https://www.twitch.tv/embed/ferlinna/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="cinq">
+        <span class="E"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="quatre" onclick="load('https://player.twitch.tv/?volume=1&channel=Justyne44');chat('https://www.twitch.tv/embed/Justyne44/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="quatre">
+        <span class="D"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="trois" onclick="load('https://player.twitch.tv/?volume=1&channel=SirKendris');chat('https://www.twitch.tv/embed/SirKendris/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="trois">
+        <span class="C"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="sept" onclick="load('https://player.twitch.tv/?volume=1&channel=qweechyes');chat('https://www.twitch.tv/embed/QWEECHYES/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="sept">
+        <span class="G"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+<div style="float: left;top: 5px;" class="onoffswitch">
+    <input type="radio" name="onoffswitch" class="onoffswitch-radio" id="six" onclick="load('https://player.twitch.tv/?volume=1&channel=Rorqualgoplay');chat('https://www.twitch.tv/embed/rorqualgoplay/chat')">
+	<!-- Ajouter checked apres myonoffswitch pour partir de ON -->
+    <label class="onoffswitch-label" for="six">
+        <span class="F"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div></br></br>
+
+
+
+<iframe id="here" src="" scrolling="no" frameborder="no" allowfullscreen=allowfullscreen></iframe>
+<iframe id="ici" src="" scrolling="no" frameborder="no" allowfullscreen=allowfullscreen></iframe>
+
+</body>
+</html>
